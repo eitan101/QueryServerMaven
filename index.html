@@ -9,8 +9,8 @@
             function connect() {
                 if (typeof websocket == 'undefined' || websocket === null) {
                     var mypath = window.location.pathname.substring(0, window.location.pathname.lastIndexOf("/"));
-                    var wsUrl = "ws://" + window.location.host + mypath + "/ws";
-                    wsUrl = "ws://localhost:8080/data/ws/default";
+                    var wsUrl = "ws://" + window.location.host + mypath + "/data/ws/default";
+                    //wsUrl = "ws://localhost:8080/data/ws/default";
                     if ("WebSocket" in window) {
                         websocket = new WebSocket(wsUrl);
                         document.getElementById("output").innerHTML = "Connecting to " + wsUrl + "...";
